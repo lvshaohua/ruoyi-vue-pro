@@ -16,9 +16,9 @@ public class PreAuthenticatedAspect {
 
     @Around("@annotation(preAuthenticated)")
     public Object around(ProceedingJoinPoint joinPoint, PreAuthenticated preAuthenticated) throws Throwable {
-        if (SecurityFrameworkUtils.getLoginUser() == null) {
-            throw exception(UNAUTHORIZED);
-        }
+//        if (SecurityFrameworkUtils.getLoginUser() == null) {
+//            throw exception(UNAUTHORIZED);
+//        }
         return joinPoint.proceed();
     }
 
