@@ -53,7 +53,7 @@ public class BpmModelController {
 
     @PutMapping("/update")
     @ApiOperation(value = "修改模型")
-    @PreAuthorize("@ss.hasPermission('bpm:model:update')")
+//    @PreAuthorize("@ss.hasPermission('bpm:model:update')")
     public CommonResult<Boolean> updateModel(@Valid @RequestBody BpmModelUpdateReqVO modelVO) {
         modelService.updateModel(modelVO);
         return success(true);
