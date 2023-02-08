@@ -19,14 +19,14 @@ public class TenantIgnoreAspect {
 
     @Around("@annotation(tenantIgnore)")
     public Object around(ProceedingJoinPoint joinPoint, TenantIgnore tenantIgnore) throws Throwable {
-        Boolean oldIgnore = TenantContextHolder.isIgnore();
-        try {
-            TenantContextHolder.setIgnore(true);
-            // 执行逻辑
+//        Boolean oldIgnore = TenantContextHolder.isIgnore();
+//        try {
+//            TenantContextHolder.setIgnore(true);
+//            // 执行逻辑
             return joinPoint.proceed();
-        } finally {
-            TenantContextHolder.setIgnore(oldIgnore);
-        }
+//        } finally {
+//            TenantContextHolder.setIgnore(oldIgnore);
+//        }
     }
 
 }
